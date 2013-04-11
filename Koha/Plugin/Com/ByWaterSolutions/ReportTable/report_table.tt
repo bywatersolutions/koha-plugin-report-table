@@ -1,0 +1,39 @@
+[% UNLESS refresh %][% SET refresh = 15 %][% END %]
+<html>
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <script type="text/javascript">
+            setTimeout(function(){
+                window.location.reload(1);
+            }, [% refresh * 1000 %]);
+        </script>
+    </head>
+
+    <body>
+        [% UNLESS report_id %]
+            Parameter report_id is required.
+        [% END %]
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    [% FOREACH c IN results.first %]
+                        <th>[% c.key %]</th>
+                    [% END %]
+                </tr>
+            </thead>
+
+            <tbody>
+                [% FOREACH r IN results %]
+                    <tr>
+                        [% FOREACH c IN r %]
+                            <td>[% c.value %]</td>
+                        [% END %]
+                    </tr>
+                [% END %]
+            </tbody>
+        </table>
+
+    </body>
+</html>
