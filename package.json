@@ -1,8 +1,8 @@
 {
-  "name": "koha-plugin-deduplication-tool",
-  "version": "0.0.1",
-  "previous_version": "0.0.1",
-  "description": "Koha Record Deduplication Plugin",
+  "name": "koha-plugin-report-table",
+  "version": "1.0.0",
+  "previous_version": "1.0.0",
+  "description": "Koha Report Table Plugin",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-cli": "^1.2.2",
@@ -14,16 +14,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bywatersolutions/koha-plugin-deduplication-tool.git"
+    "url": "git+https://github.com/bywatersolutions/koha-plugin-report-table.git"
   },
   "author": "Kyle M Hall <kyle@bywatersolutions.com>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/bywatersolutions/koha-plugin-deduplication-tool/issues"
+    "url": "https://github.com/bywatersolutions/koha-plugin-report-table/issues"
   },
-  "homepage": "https://github.com/bywatersolutions/koha-plugin-deduplication-tool#readme",
+  "homepage": "https://github.com/bywatersolutions/koha-plugin-report-table#readme",
   "dependencies": {
     "datetime": "0.0.3",
+    "gulp-replace": "^0.6.1",
+    "jsonfile": "^4.0.0",
     "node-datetime": "^2.0.0"
   }
 }
